@@ -1,0 +1,41 @@
+
+.form{
+	margin: auto;
+	max-width: 400px;
+
+	&__actions{
+		input[type="submit"]{
+			background-color: $lime;
+			border: none;
+			padding: 10px 30px;
+		}
+	}
+
+	&__item{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		margin:{bottom: 40px;};
+
+		&--checkbox, &--radiobtn{
+			align-items: center;
+			flex-direction: row;
+		}
+
+		label{
+			font:{size:rem(14px); weight: 700;};
+		}
+
+		input[type="text"],input[type="email"], select{
+			background-color: transparent;
+			border: none;
+			border-bottom: 1px solid map-get($colors, _black);
+			padding: 10px 0 5px;
+		}
+
+		select{
+			width: 100%;
+
+		}
+	}
+}

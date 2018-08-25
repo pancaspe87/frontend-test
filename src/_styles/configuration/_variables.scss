@@ -1,0 +1,22 @@
+//fonts
+$print-font-size:     	12px;
+
+// Common Font Weights From Google Fonts
+$thin: 100;
+$light-font: 300;
+$normal: 400;
+$medium: 500;
+$bold: 700;
+$ultra-bold: 900;
+
+// Variable settings for grids
+$gutter:                20px;
+$gutterTablet:          12px;
+$gutterDesktop:         20px;
+
+// Breakpoints
+$bp-small-mobile: 		400px;
+$bp-mobile-max:         767px;
+$bp-min-tablet:         768px;
+$bp-min-desktop:        1024px;
+$bp-max-desktop:        1400px;

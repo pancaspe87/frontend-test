@@ -1,0 +1,52 @@
+table {
+
+    &.table{
+        background-color: transparent;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font-size: rem(16px);
+        margin-bottom: 20px;
+        table-layout: auto;
+        width: 100%;
+
+        thead{
+
+            th {
+                background: $dark;
+                color: $light;
+                text-align: left;
+            }
+        }
+
+        tbody{
+            border: 1px solid $lightGrey;
+            border-top: 0;
+            tr{
+                &:nth-child(even){
+                    background: $lightGrey;
+                }
+
+            }
+        }
+
+        tr{
+            th, td {
+                font-size: rem(14px);
+                font-weight: 400;
+                line-height: 1;
+                padding: 20px 20px;
+                vertical-align: top;
+
+                @include mobile {
+                    padding: 20px 12px;
+                }
+
+                @media print{
+                    font-size: $print-font-size !important;
+                    padding: 10px 20px;
+                }
+            }
+        }
+    }
+
+}

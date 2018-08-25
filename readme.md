@@ -1,39 +1,59 @@
-# Front-end Developer Test
+# Momo readme
 
-### Fastrack Group
+Generated on 2017-05-06 using
+[generator-yeogurt@2.0.0](https://github.com/larsonjj/generator-yeogurt)
 
-The purpose of this test is not only to quickly gauge an applicant's abilities with a simple HTML/CSS mockup, but also their approach to development.  It is not intended that applicants spend a great deal of time on the project - no more than two hours.
+## Description
 
-Applicants may use whatever techniques and Javascript/CSS frameworks they want to achieve the outcome.
+This is an example readme file.
+Describe your site/app here.
 
-The design is very rudimentary, and it certainly won't be winning any awards - this is to ensure that the applicant can be confident that we are not simply using them to produce some work for us without pay!
+## Technologies used
 
-## How to complete the task
+JavaScript
+- [Browserify](http://browserify.org/) with ES6/2015 support through [Babel](https://babeljs.io/)
+- [Node](https://nodejs.org/)
 
-First, fork this repository into your own public repo.  Complete the project and commit your work - minus the original Photoshop file (to keep the size down).  Send the URL of your own repository to development@fastrackg.com with the subject 'Front-end Developer Test'.
+Testing
+- [Karma](http://karma-runner.github.io/0.13/index.html)
+- [Jasmine](http://jasmine.github.io/)
 
-If you are not comfortable with using Git, you can download the source files as a ZIP archive (click the `Download ZIP` button on the right).  Complete the task and then re-archive all of your files (do NOT include the Photoshop file).  Share the file to development@fastrackg.com using a service such as Dropbox.
+Styles
+- [Sass](http://sass-lang.com/) via ([node-sass](https://github.com/sass/node-sass))
 
-## Show your working
+Markup
+- [Jade](http://jade-lang.com/)
 
-If you choose to use build tools to compile your CSS and Javascript (such as SASS of Coffescript) please include the original files as well.  You may update this README file outlining the details of what tools you have used.
+Optimization
+- [Imagemin](https://github.com/imagemin/imagemin)
+- [Uglify](https://github.com/mishoo/UglifyJS)
 
-## Fonts
+Server
+- [BrowserSync](http://www.browsersync.io/)
 
-The fonts used in the document are Lato and Arvo - both are available on Google Fonts.
+Linting
+- [ESlint](http://eslint.org/)
 
-## Cross-browser inconsistencies
+Automation
+- [Gulp](http://gulpjs.com)
 
-If you get around to doing cross-browser testing, for the sake of this project do not worry about any versions of Internet Explorer below version 9.  The most up-to-date versions of Chrome, Firefox and Safari will also suffice.  Include details in the README file/email of what cross-browser testing you have been able to do.
+Code Management
+- [Editorconfig](http://editorconfig.org/)
+- [Git](https://git-scm.com/)
 
-## Responsive Design
 
-For extra credit, ensure that the site scales well on mobile.  For giggles, hide the 'Facilties' panel when viewed on anything smaller than a portrait orientated iPad (we'll let you figure out the breakpoints).
+## Automated tasks
 
-## Clean code
+This project uses [Gulp](http://gulpjs.com) to run automated tasks for development and production builds.
+The tasks are as follows:
 
-This fictitious project is part of a larger plan to reuse templates for multiple properties.  When authoring your CSS ensure that it is easy for another developer to find and change things such as fonts and colours.
+`gulp --production`: Same as `gulp serve --production` also run `gulp test` and  not boot up production server
 
-## Good luck!
+`gulp serve`: Compiles preprocessors and boots up development server
+`gulp serve --open`: Same as `gulp serve` but will also open up site/app in your default browser
+`gulp serve --production`: Same as `gulp serve` but will run all production tasks so you can view the site/app in it's final optimized form
 
-We look forward to seeing what you can do.  Remember, although it *is* a test, there are no specific right or wrong answers that we are looking for - just do the job as best you can.  Any questions - create an issue in the panel on the right (requires a Github account).
+`gulp test`: Lints all `*.js` file in the `source` folder using eslint and runs all `*.test.js` file unit tests through [Karma](http://karma-runner.github.io/0.13/index.html) and Jasmine
+`gulp test --watch`: Same as `gulp test` but will constantly watch `*.test.js` files and rerun tests when changes are detected
+
+***Adding the `--debug` option to any gulp task displays extra debugging information (ex. data being loaded into your templates)***

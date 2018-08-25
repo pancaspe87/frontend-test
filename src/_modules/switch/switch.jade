@@ -1,0 +1,15 @@
+mixin switch(spec)
+  - spec = spec || {}
+  - spec.positionTitle = spec.positionTitle || ''
+
+    .switch
+
+       .switch__title(class=spec.positionTitle)
+            |I agree to the 
+            a(href="#")|Privacy Policy
+
+        ul.switch__object
+                
+            li.switch__object--no.active
+
+            li.switch__object--yes

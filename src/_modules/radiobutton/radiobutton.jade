@@ -1,0 +1,10 @@
+mixin radiobutton(spec)
+  - spec = spec || {}
+  - spec.id = spec.id || ''
+  - spec.label = spec.label || ''
+
+  .form__item.form__item--radiobtn
+
+        input(id=spec.id, type="radio")
+
+        label(for=spec.id)=spec.label

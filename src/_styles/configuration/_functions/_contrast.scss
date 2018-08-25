@@ -1,0 +1,14 @@
+@function contrast($color,$lighter,$darker,$threshold:128){
+	$red: (red($color) * 299) / 1000;
+	$green: (green($color) * 587) / 1000;
+	$blue: (blue($color) * 114) / 1000;
+
+	$ratio:$red + $green + $blue;
+	
+	@if($ratio > $threshold){
+		@return $lighter;
+	}
+	@else{
+		@return $darker;
+	}
+}

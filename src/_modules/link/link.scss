@@ -1,0 +1,42 @@
+// link styles
+.link{
+
+	&__enclosure{
+		display: inline-block;
+	    margin: {
+	    	bottom: 10px;
+	    };
+	    padding: {
+	    	bottom: 10px;
+	    };
+		position: relative;
+	}
+	
+	&.border{
+
+		&:after{
+			content: '';
+			width: 0;
+		    height: 1px;
+			background-color: $lime;
+		    bottom: 5px;
+		    display: block;
+		    left: 0;
+		    margin: auto;
+		    position: absolute;
+		    right: 0;
+		    pointer-events: none;
+		    transition: width 0.35s ease;
+		    visibility: visible;
+		}
+
+		&:hover{
+			color: $dark;
+
+			&:after{
+				width: 100%;
+			}
+		}
+	}	
+}
+

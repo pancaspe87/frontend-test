@@ -1,0 +1,10 @@
+mixin checkbox(spec)
+  - spec = spec || {}
+  - spec.id = spec.id || ''
+  - spec.label = spec.label || ''
+
+    .form__item.form__item--checkbox
+
+        input(id=spec.id, type="checkbox")
+
+        label(for=spec.id)=spec.label
