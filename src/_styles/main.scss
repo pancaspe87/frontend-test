@@ -1,6 +1,10 @@
 // Normalize Styles
 @import 'node_modules/normalize.css/normalize';
 
+// Vendors
+@import "./node_modules/pickadate/lib/compressed/themes/default";
+@import "./node_modules/pickadate/lib/compressed/themes/default.date";
+
 // Import all needed help
 @import 'configuration/_functions/_contrast';
 @import 'configuration/_functions/_rem';
@@ -30,6 +34,13 @@
 @import '../_modules/radiobutton/radiobutton';
 @import '../_modules/switch/switch';
 @import '../_modules/table-scroll/table-scroll';
+
+// Import Fast Track style
+@import 'application/header';
+@import 'application/footer';
+@import 'sections/hero';
+@import 'sections/info';
+@import 'sections/map';
 
 
 // Box sizing partial styles:

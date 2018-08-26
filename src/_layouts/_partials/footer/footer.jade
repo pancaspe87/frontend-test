@@ -1,0 +1,9 @@
+footer.footer
+    .container
+        .footer-content
+            .copy
+                | © 2015. Sunshine Cove
+            ul.socials-list
+                 each item, index in site.data.socials.items
+                    li
+                        a(href=item.link)

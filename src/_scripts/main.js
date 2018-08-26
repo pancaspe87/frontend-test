@@ -5,6 +5,8 @@
 
 //dependencies
 import $ from 'jquery';
+import 'pickadate';
+import 'pickadate-date';
 
 
 import './_helpers';
@@ -24,5 +26,22 @@ $(() => {
   new Switch();
   new TableScroll();
   console.log('Welcome to Yeogurt!');
+  
+
+  $('.datepicker').pickadate({
+    format: 'dd-mm-yyyy'
+  });
+
+  $('body').on('change', '.datepicker', function(e) {
+    let $this = $(this),
+      isEmpty = $this.val() === '' ? true : false;
+
+    if(isEmpty)
+      return false;
+
+    $(this)
+      .siblings('label')
+      .addClass('is-valid');
+  });
 
 });

@@ -1,0 +1,89 @@
+.info{
+    padding: {
+        top: 2 * $gutter;
+    }
+
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        margin: {
+            left: -$gutter;
+            right: -$gutter;
+        };
+    }
+
+    &-tile{
+        display: flex;
+        margin-bottom: 2 * $gutter;;
+        padding: {
+            left: $gutter;
+            right: $gutter;
+        };
+        width: 100%;
+
+        @include tablet{
+            min-height: 300px;
+            width: 50%;
+        }
+
+        &__content{
+            padding: $gutter;
+            position: relative;
+            width: 100%;
+
+            &.bg-blue{
+                background-color: map-get($colors, _blue);
+                color: map-get($colors, _white);
+
+                h2{
+                    border-bottom: 1px solid map-get($colors, _white);
+                }
+            }
+
+            &.border-blue{
+                border: 5px solid map-get($colors, _blue);
+
+                h2{
+                    color: map-get($colors, _blue);
+                    border-bottom: 1px solid map-get($colors, _blue);
+                }
+            }
+
+            img{
+                @include tablet{
+                    min-height:100%;
+                    max-height:100%;
+                    min-width:100%;
+                    max-width:100%;
+                    position:absolute;
+                    left:50%;
+                    top:50%;
+                    transform:translateX(-50%) translateY(-50%);
+                }
+            }
+        }
+
+        &--booking{
+            > div{
+                @include tablet{
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                form{
+                    @include tablet{
+                        align-self: flex-end;
+                    }
+                }
+            }
+        }
+
+        &--facilities{
+            display: none;
+
+            @include tablet{
+                display: flex;
+            }
+        }
+    }
+}

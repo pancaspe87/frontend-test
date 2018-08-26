@@ -3,7 +3,8 @@
 // Use http://chir.ag/projects/name-that-color/ to name your colours
 $colors:(
 	_black:#000,
-	_venice-blue:#0a51a1,
+	_blue:#0a51a1,
+	_grey: #e6e6e6,
 	_white:#fff
 );
 
@@ -36,4 +37,3 @@ $material-background:   #eee;
 
 $dark:map-get($colors,_black);
 $light:map-get($colors,_white);
-$nav:map-get($colors,_venice-blue);

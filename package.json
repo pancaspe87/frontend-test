@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "jquery": "~3.1.1",
-    "normalize.css": "~5.0.0"
+    "normalize.css": "~5.0.0",
+    "pickadate": "^3.5.6"
   },
   "devDependencies": {
     "autoprefixer": "~6.7.5",
@@ -57,13 +58,17 @@
     "clean-deps": "rimraf node_modules"
   },
   "browser": {
-    "jquery": "./node_modules/jquery/dist/jquery.js"
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "pickadate": "./node_modules/pickadate/lib/compressed/picker.js",
+    "pickadate-date": "./node_modules/pickadate/lib/compressed/picker.date.js"
   },
   "browserify-shim": {
     "jquery": "$"
   },
   "browserify": {
-    "transform": [ "browserify-shim" ]
+    "transform": [
+      "browserify-shim"
+    ]
   },
   "engines": {
     "node": ">=0.12.0"

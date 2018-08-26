@@ -3,10 +3,58 @@ extends _layouts/base
 include _modules/link/link
 
 block content
-  .container
-    .yeogurt-info
-      h1 Welcome to Yeogurt!
-      p.
-        Take a look at the
-        #[+link({text: 'documentation'})(href='https://github.com/larsonjj/generator-yeogurt#yeogurt-generator---')]
-        and start mixing up something awesome.
+  section.hero
+      .hero-foreground
+        .container
+          h1 The only place to stay on the Sunshine Coast
+
+      .hero-background
+
+        .hero-media
+
+          img.hero-media__object(src="../../images/hero.jpg")
+
+  section.info
+    .container
+      .info-list
+        .info-tile
+          .info-tile__content.bg-blue
+            h2 Welcome
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales mauris vitae nisl lacinia, a ullamcorper dolor sollicitudin. Suspendisse egestas ex non aliquet efficitur.
+            p Quisque vel nunc tempor, scelerisque magna vitae, viverra erat. Fusce iaculis metus ut ex elementum interdum.
+        
+        .info-tile.info-tile--booking
+          .info-tile__content.border-blue
+            div
+              h2 Book Now
+              p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales mauris vitae nisl lacinia, a ullamcorper dolor sollicitudin.
+            form.form(action="" method="post")
+              .form-row
+                .form-item.w-full
+                  input.datepicker(id="checkin-date" type="text" required)
+                  label(for="checkin-date") Check-In Date
+              .form-row
+                .form-item.w-half
+                  input(id="number-nights" type="number" required)
+                  label(for="number-nights") Nights
+                .form-actions.w-half
+                  input(value="Check Availability" type="submit")
+
+        .info-tile.info-tile--facilities
+          .info-tile__content.border-blue
+            h2 Facilities
+            p Quisque vel nunc tempor, scelerisque magna vitae, viverra erat. Fusce iaculis metus ut ex elementum interdum.
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales mauris vitae nisl lacinia, a ullamcorper dolor sollicitudin. Suspendisse egestas ex non aliquet efficitur.
+
+        .info-tile
+          .info-tile__content
+           img(src="../../images/hero.jpg")
+
+  section.map
+    iframe(
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.457783406027!2d153.04669095050318!3d-27.455004082813126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9159908a654ab7%3A0xf024bc0966a0abdd!2sSuite+9A+Level+1%2F30+Florence+St%2C+Teneriffe+QLD+4005!5e0!3m2!1sen!2sau!4v1535180394750" 
+      width="600" 
+      height="450" 
+      frameborder="0" 
+      allowfullscreen
+    )
