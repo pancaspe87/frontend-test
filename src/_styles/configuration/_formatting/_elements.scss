@@ -1,4 +1,4 @@
-p{
+body{
 	font:{family:map-get($fonts,common);};
 }
 
@@ -94,17 +94,29 @@ strong{
 }
 
 h1,h2,h3,h4,h5,h6{
-	font:{family:map-get($fonts,heading);};
+	font: {
+		family:map-get($fonts,heading);
+		weight: normal;
+	};
 	margin: 0;
 	padding: 0;
 }
 
 h1{
-	font:{size:rem(65px);};
+
+	font: { size:rem(48px); };
+
+	@include tablet{
+		font: { size:rem(65px);};
+	}
 }
 
 h2{
-	font:{size:rem(48px);};
+	font: { size:rem(36px); };
+
+	@include tablet{
+		font: { size:rem(48px); };
+	}
 }
 
 h3{

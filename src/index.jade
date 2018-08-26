@@ -2,15 +2,14 @@ extends _layouts/base
 
 block content
   section.hero
-      .hero-foreground
-        .container
-          h1 The only place to stay on the Sunshine Coast
+    .hero-foreground
+      .container
+        h1 The only place to stay on the Sunshine Coast
 
-      .hero-background
-
-        .hero-media
-
-          img.hero-media__object(src="../../images/content/hero.jpg")
+    .hero-background
+      .hero-media
+        img.hero-media__object(src="../../images/content/hero.jpg")
+  //- end: hero
 
   section.info
     .container
@@ -20,6 +19,7 @@ block content
             h2 Welcome
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales mauris vitae nisl lacinia, a ullamcorper dolor sollicitudin. Suspendisse egestas ex non aliquet efficitur.
             p Quisque vel nunc tempor, scelerisque magna vitae, viverra erat. Fusce iaculis metus ut ex elementum interdum.
+        //-end info-tile: welcome
         
         .info-tile.info-tile--booking
           .info-tile__content.border-blue
@@ -37,16 +37,21 @@ block content
                   label(for="number-nights") Nights
                 .form-actions.w-half
                   input(value="Check Availability" type="submit")
+        //-end info-tile: booking
 
         .info-tile.info-tile--facilities
           .info-tile__content.border-blue
             h2 Facilities
             p Quisque vel nunc tempor, scelerisque magna vitae, viverra erat. Fusce iaculis metus ut ex elementum interdum.
             p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales mauris vitae nisl lacinia, a ullamcorper dolor sollicitudin. Suspendisse egestas ex non aliquet efficitur.
+        //-end info-tile: facilities 
 
         .info-tile
-          .info-tile__content
-           img(src="../../images/content/hero.jpg")
+          .info-tile__content.has-image
+            img(src="../../images/content/hero.jpg")
+        //-end info-tile: map
+
+  //- end: info
 
   section.map
     iframe(
@@ -56,3 +61,4 @@ block content
       frameborder="0" 
       allowfullscreen
     )
+  //- end: map

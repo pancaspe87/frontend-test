@@ -3,6 +3,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	max-width: 100%;
+	font-size: rem(24px);
 
 	&-actions,
 	&-item{
@@ -34,11 +35,20 @@
 	&-actions{
 		input[type="submit"]{
 			background-color: map-get($colors, _blue );
+			border: none;
 			color: map-get($colors, _white );
 			cursor: pointer;
-			border: none;
-			padding: $gutter rem(10px);
+			font: {
+				family:map-get($fonts,heading);
+			};
+			max-height: rem(50px);
+			padding: rem(12px) 0;
 			width: 100%;
+
+			//Truncate
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
 	}
 

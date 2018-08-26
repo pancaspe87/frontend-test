@@ -6,5 +6,10 @@
     &-logo{
         position: relative;
         z-index: 2;
+        max-height: rem(40px);
+
+        @include tablet{
+            max-height: rem(100px);
+        }
     }
 }
