@@ -2,15 +2,15 @@
    "items" : [
         {   
             "link": "https://www.facebook.com/",
-            "icon": ""
+            "icon": "../../images/icons/facebook.png"
         },
         {   
             "link": "https://twitter.com/",
-            "icon": ""
+            "icon": "../../images/icons/twitter.png"
         },
         {   
             "link": "https://www.instagram.com/",
-            "icon": ""
+            "icon": "../../images/icons/instagram.png"
         }
     ]
 }
