@@ -6,7 +6,7 @@
 @import "./node_modules/pickadate/lib/compressed/themes/default.date";
 
 // Import all needed help
-@import 'configuration/_functions/_contrast';
+// @import 'configuration/_functions/_contrast';
 @import 'configuration/_functions/_rem';
 @import 'configuration/_functions/_strip-units';
 
@@ -21,21 +21,13 @@
 
 @import 'configuration/_formatting/_elements';
 @import 'configuration/_formatting/_images';
-@import 'configuration/_formatting/_table';
+// @import 'configuration/_formatting/_table';
 
 @import 'utilities/_grid';
 
 @import 'forms/_form';
-@import 'forms/_select';
 
-// Import Modules
-@import '../_modules/checkbox/checkbox';
-@import '../_modules/link/link';
-@import '../_modules/radiobutton/radiobutton';
-@import '../_modules/switch/switch';
-@import '../_modules/table-scroll/table-scroll';
-
-// Import Fast Track style
+// Import Test style
 @import 'application/header';
 @import 'application/footer';
 @import 'sections/hero';
